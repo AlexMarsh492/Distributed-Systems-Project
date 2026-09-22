@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Triva Master</h1>
+    <Drop class="DropDown">
+        <Label for="QuestionType" id="QuestionID">Choose a Question Category: </Label>
+        <select name="Category" id="CategoryID">
+            <option value="Any" selected>Any</option>
+        </select>
+        <br><br>
+        <label for="Numberofquestions" id="NOQ">Number of Questions</label>
+        <input type="text" id="NumofQuestions" maxlength="2" size="1" value="1"></input>
+
+        <br><br>
+        <Button type="button" id="GetQuestions">Quiz Time!</Button>
+
+        <br><br>
+
+        <Question id="Question"></Question>
+        <br><br>
+
+        <button type="button" hidden="hidden" id="Answer1"></button>
+        <button type="button" hidden="hidden" id="Answer2"></button>
+        <br><br>
+        <button type="button" hidden="hidden" id="Answer3"></button>
+        <button type="button" hidden="hidden" id="Answer4"></button>
+
+        <br><br>
+
+        <label id="ChangeTimer" hidden="hidden"></label>
+
+    </Drop>
+</body>
+<script src="./QuestionScript.js" type="text/javascript"></script>
+</html>

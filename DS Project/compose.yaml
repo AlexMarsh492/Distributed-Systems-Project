@@ -1,0 +1,41 @@
+services:
+  Questions:
+    image: alexmarsh87/questionapp
+    pull_policy: always
+    build:
+      context: ./
+    
+    container_name: Questions
+    restart: always
+    env_file:
+    - .env
+
+    ports:
+    - ${QUESTIONS_CONTAINER_PORT}:${QUESTION_PORT} 
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+  
+
+  mysql:  
+    image: mysql                   
+    container_name: mysql
+    restart: unless-stopped        
+    env_file:
+    - .env                         
+    healthcheck:
+      test: ["CMD-SHELL", "mysql -u$$MYSQL_USER -p$$MYSQL_PASSWORD -e 'SELECT1'"]
+      interval: 10s
+      timeout: 1s
+      retries: 10
+      start_period: 20s
+    volumes:
+     - mysql:/var/lib/mysql
+     - ./QuestionsDB.sql:/docker-entrypoint-initdb.d/QuestionsDB.sql  
+    ports:
+      - ${MYSQL_CONTAINER_PORT}:${MYSQL_PORT}  
+
+
+volumes:
+  mysql: 

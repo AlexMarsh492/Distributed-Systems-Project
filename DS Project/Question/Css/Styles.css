@@ -1,0 +1,66 @@
+h1{
+    text-align: center;
+    color: white;
+}
+
+body{
+    text-align: center;
+    background-color: blue;
+}
+
+.DropDown{
+    color:white;
+    text-align: center;
+}
+
+#GetQuestions{
+    color: white;
+    background-color: grey;
+    font-size: 18px;
+    height: 50px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+#Question{
+    text-align: center;
+}
+
+#Answer1{
+    color: white;
+    background-color: grey;
+    font-size: 18px;
+    height: 60px;
+    width: 110px;
+    border-radius: 10px;
+}
+
+#Answer2{
+    color: white;
+    background-color: grey;
+    font-size: 18px;
+    height: 60px;
+    width: 110px;
+    border-radius: 10px;
+}
+#Answer3{
+    color: white;
+    background-color: #808080;
+    font-size: 18px;
+    height: 60px;
+    width: 110px;
+    border-radius: 10px;
+}
+#Answer4{
+    color: white;
+    background-color: grey;
+    font-size: 18px;
+    height: 60px;
+    width: 110px;
+    border-radius: 10px;
+}
+
+#ChangeTimer{
+    color:white;
+    text-align: center;   
+}
